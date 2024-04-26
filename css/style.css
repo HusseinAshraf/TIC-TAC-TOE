@@ -1,0 +1,110 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root {
+    --orange: #F2C14E;
+    --winning-blocks: #0c1fee;
+}
+body{
+    color: var(--orange);
+    font-family: 'Finger Paint', cursive;
+    background-color: black;
+    cursor: pointer;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 50px;
+    height: 100Vh;
+    width: 100%;
+    margin: 25px auto;
+
+}
+
+
+h1{
+    font-size: 55px;
+    text-transform: uppercase;
+}
+.display{
+    font-size: 20px;
+}
+.hide{
+    display: none;
+}
+.display span{
+    font-size: 45px;
+    color: var(--winning-blocks);
+    
+
+}
+.board{
+    width: 300px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.box{
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--orange);
+    font-size: 120px;
+    border-right: 2px solid;
+    border-bottom: 2px solid;
+}
+.playerX , .playerO{
+    font-size: 70px;
+}
+.box:nth-child(3n) {
+    border-right: none;
+}
+.box:nth-child(6) ~ .box {
+    border-bottom: none;
+} 
+.controls{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin-top: 1rem;
+   
+}
+#reset{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    color: var(--orange);
+    border: 2px solid var(--orange);
+    border-radius: 15px;
+    padding: 8px 10px;
+    cursor: pointer;
+    font-size: 25px;
+    margin-top: 9px;
+    transition: all .4s;
+}
+#reset:hover{
+    background-color: var(--orange);
+    color: black;
+}
+#reset i{
+    font-size: 20px;
+    margin-right: 8px;
+    transition: all .3s;
+}
+#reset:hover i{
+    transform: rotate(360deg);;
+    color: black;
+}
+.announcer{
+    font-size: 40px;
+    margin-top: 1rem;
+}
